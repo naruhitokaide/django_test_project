@@ -1,0 +1,218 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
+        <!-- <li><i class="uil uil-moon change-theme" id="theme-button"></i></li> -->
+        <button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+        <div class="home-header-background shapeHide headerSpaceNone">
+            {% include 'nav.html' %}
+        </div>
+        <section class=" descript "  id="home">
+            <div class="container ">
+
+                <div class="small-container ">
+                    <div class="row">
+                        {% for info in personalInfo %}
+                        <div class="col-md-6 initial-0 aos-init " data-aos="zoom-in" data-aos-delay="200">
+                            <p id="hey">HEY THERE !</p>
+
+                            <h1 id="name">I'm <span>{{info.name_complete}}</span> </h1>
+                            <h3> A Full Stack Web Developer</h3>
+                            <p> <span id="big"></span>{{info.mini_about}}</p>
+
+                            <div class="social">
+                                <a href="{{info.linkedin}}"><i class="fa fa-linkedin" style="background: #4974c5"></i></a></a>
+                                <a href="{{info.github}}"><i class="fa fa-github"></i></a>
+                            </div>
+
+                            <div class="button">
+                                <a href="mailto:{{info.email}}"> <button class="main-button2">Contact me <i class="uil uil-message"style="" ></i>  </button></a>
+                                <a class="main-button ml-2" href="{{info.cv.url}}" target="_blank" rel="noopener noreferrer"> <button id="btn2">My Resume <i class="uil uil-import"></i></i>
+                                </button></a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 initial-1 aos-init" data-aos="zoom-in" data-aos-delay="300">
+                            <img src="{{info.avatar.url}}" alt="">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about its-me " id="about">
+            <div class="container2">
+
+                <div class="small-container2 ">
+                    <div class="row2 initial-3">
+                        {% for aboutme in about %}
+                        <div class="col-md-6 aos-init" data-aos="fade-up-right" data-aos-delay="700">
+                            <img src="{{aboutme.about_avatar.url}}" alt="">
+                        </div>
+                        <div class="col-md-6 initial-4">
+                            <div class="title aos-init" data-aos="zoom-in" data-aos-delay="200">
+                                <h1>{{aboutme.title}}</h1>
+                            </div>
+                            <p data-aos="zoom-in" data-aos-delay="200" class="aos-init">{{aboutme.description1}}</p>
+                            <p data-aos="zoom-in" data-aos-delay="200" class="aos-init">{{aboutme.description2}}</p>
+                            <div class="icons aos-init" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="skill-item"> 
+                                    <i class="fa fa-html5"></i>
+                                    <p>Html5</p>
+                                </div>
+
+                                <div class="skill-item"> 
+                                    <i class="fa fa-css3 " aria-hidden=”true”></i>
+                                    <p>Css</p>
+                                </div>
+                                <div class="skill-item"> 
+                                    <ion-icon name="logo-javascript" style="color: yellow;font-size:35px"></ion-icon>
+                                    <p>Javascript</p>
+                                </div>
+                                <div class="skill-item"> 
+                                    <ion-icon name="logo-python" style="color: #38a4ec;font-size:35px"></ion-icon>
+                                    <p>Python</p>
+                                </div>
+
+                                <div class="skill-item"> 
+                                    <i class="fa fa-database"></i>
+                                    <p>database</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+
+            <article>
+                <div class="container skills" id="skills">
+
+                    <div class="small-container">
+                        <div class="row9">
+                            <div class="col-md-10 initial-5">
+                                <div class="title">
+                                    <h1 class="">SKILLS</h1>
+                                </div>
+                                <div class="all-bars">
+                                    {% for skill in skills %}
+                                    <div class="bars aos-init" data-aos="fade-in" data-aos-delay="800">
+                                        <div class="bar-info">
+                                            <p>{{ skill.name}}</p>
+                                            <h5>{{ skill.percentage }}%</h5>
+                                        </div>
+                                        <div class="bar">
+                                            <p class="percentage" style="width: {{ skill.percentage }}%">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+
+        <div class="work">
+            <div class="container" id="work">
+                <div class="title2">
+                    <h1>MY PROJECTS</h1>
+                </div>
+                <div class="small-container">
+                    <div class="row3">
+                        {% for project in projects %}
+                        <div class="card initial-6  w- aos-init" data-aos="zoom-in" data-aos-delay="500">
+                            <img src="{{project.image.url}}" alt="">
+                            <div class="card-body col-5-info px-3 py-3">
+                                <h3 class="pb-1">{{project.title}}</h3>
+                                <p class="pb-1">{{project.skill}}</p>
+                                <button><a href="{{project.link}}" style="color: white;!important">Visit Site</a></button>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer id="contact">
+            <div class="container">
+                <div class="title5">
+                    <h1>CONTACT ME</h1>
+                </div>
+                <div class="small-container">
+                    <div class="row4">
+                        {% for info in personalInfo %}
+    
+                        <div class="col-md-6 initial-8 aos-init" data-aos="fade-down-right" data-aos-delay="300">
+                            <p id="helo">Please contact me if I have made a perfect test project. <img src="{%  static 'images/e.png' %}" alt="" id="e" class="wave"></p>
+
+                            <div class="contact-info">
+                                <div class="c-ico">
+                                    <i class="fa fa-comments"></i> <span id="io">Say Hello</span></i>
+                                </div>
+                                <p>Email: <span>{{info.email}}</span></p>
+                            </div>
+                            <div class="contact-info obojo">
+                                <div class="c-ico">
+                                    <i class="fa fa-share-square-o"> <span id="io">Social networks</span> </i>
+                                </div>
+                                <h4>
+                                    <a href="{{info.github}}"><i class="fa fa-github"></i></a>
+                                    <a href="{{info.linkedin}}"><i class="fa fa-linkedin" style="background: #4974c5"></i></a>
+                                </h4>
+
+                            </div>
+                        </div>
+                        <div class=" col-md-6 initial-7 aos-init " data-aos="zoom-in " data-aos-delay="700 ">
+                            <img src="{% static 'images/19.svg' %} " alt=" ">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="footing ">
+                        <div class="row justify-content-center ">
+                            <div class="col-md-4 ">
+                                <p>Designed By </p>
+                                <p>Naruhito Kaide</p>
+                                <p>A Full Web Developer</p>
+                                <p id="copy ">© COPYRIGHTS TEST FOR DJANGO DEVELOPER POSITION
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="up-arrow ">
+                <div class="arrow ">
+                    <a href="# "><i class="fa fa-angle-up "></i>
+                </a>
+                </div>
+            </div>
+        </footer>
+
+        <div id="preloader"></div>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <script src="{% static 'jquery/jquery.min.js' %}"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'jquery.easing/jquery.easing.min.js' %}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </body>
+{% endblock %}
+
+</html>

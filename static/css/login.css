@@ -1,0 +1,61 @@
+.container {
+    width: 400px;
+    height: auto;
+    background-color: white; /* set container background to purple */
+    border-radius: 10px; /* round container corners */
+    box-shadow: 0px 0px 20px #333; /* add shadow to container */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    color: #5b21b6; /* set heading text color to white */
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Niconne;
+  }
+  
+  form {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #5b21b6; /* set label text color to white */
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #5b21b6;
+    border-width: 1px;
+    border-style: solid;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #5b21b6; /* set button background to white */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* set button text color to purple */
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  body {
+    background-color: #5b21b6;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

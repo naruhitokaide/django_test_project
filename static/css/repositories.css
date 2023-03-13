@@ -1,0 +1,44 @@
+  .repository-list {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  .repository-list h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .repository-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .repository-list li {
+    background-color: white;
+    border: 2px solid purple;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 20px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .repository-list li:hover {
+    background-color: purple;
+    color: white;
+  }
+  
+  .repository-list li a {
+    color: purple;
+    text-decoration: none;
+  }
+  
+  .repository-list li a:hover {
+    border-bottom: none;
+    color: white;
+  }
+  

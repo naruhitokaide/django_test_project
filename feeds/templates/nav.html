@@ -1,0 +1,39 @@
+<header id="header" class="fixed-top">
+    <div class="container-fluid navbur">
+        <div class="navi">
+            <div class="col-xl-9 d-flex align-items-center lefty">
+                <h1 class="logo mr-auto"><a href="#">Naruhito Kaide</a></h1>
+                <nav class="nav-menu d-none d-lg-block float-right">
+                    {% if 'repositories' in request.path %}
+                        <ul>
+                            <li><a href="{% url 'home_page' %}">Home</a></li>
+                            <li class="active"><a href="{% url 'home_page' %}">Repos</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            <li>
+                                <div class="invert pl-4">
+                                    <ion-icon name='contrast-outline' style="color:rgb(17, 190, 221)"></ion-icon>
+                                </div>
+                            </li>
+                        </ul>
+                    {% else %}
+                        <ul>
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#work">My Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="{% url 'repositories' %}">Repos</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            <li>
+                                <div class="invert pl-4">
+                                    <ion-icon name='contrast-outline' style="color:rgb(17, 190, 221)"></ion-icon>
+                                </div>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </nav>
+                <div class="changed mx-3"><i class="icofont-ui-brightness change-theme" id="theme-button"></i></div>
+            </div>
+        </div>
+    </div>
+</header>

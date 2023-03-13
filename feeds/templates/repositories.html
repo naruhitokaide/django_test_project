@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="home-header-background shapeHide headerSpaceNone">
+        {% include 'nav.html' %}
+    </div>
+    <div class="repository-list">
+        <h1>My Repositories</h1>
+        <ul>
+        {% for repository in repositories %}
+            <li>
+            <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/repositories.css' %}">
+{% endblock %}

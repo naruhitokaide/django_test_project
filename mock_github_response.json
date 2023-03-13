@@ -1,0 +1,28 @@
+[
+    {
+        "id": 123456,
+        "name": "test-repo1",
+        "full_name": "test/test-repo1",
+        "description": "This is a test repository.",
+        "language": "Python",
+        "forks_count": 1,
+        "stargazers_count": 2,
+        "html_url": "https://github.com/test/test-repo1",
+        "created_at": "2022-03-13T10:00:00Z",
+        "updated_at": "2022-03-13T11:00:00Z",
+        "pushed_at": "2022-03-13T12:00:00Z"
+    },
+    {
+        "id": 234567,
+        "name": "test-repo2",
+        "full_name": "test/test-repo2",
+        "description": "This is another test repository.",
+        "language": "JavaScript",
+        "forks_count": 3,
+        "stargazers_count": 4,
+        "html_url": "https://github.com/test/test-repo2",
+        "created_at": "2022-03-12T10:00:00Z",
+        "updated_at": "2022-03-12T11:00:00Z",
+        "pushed_at": "2022-03-12T12:00:00Z"
+    }
+]
